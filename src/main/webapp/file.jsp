@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	</div>
 	<div class="page__bd">
-		<a href=""></a>
+		<a @click="previewFile('https://github.com/yuxiaoyong/appdemo/blob/master/doc/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97%20V1.0.docx?raw=true')" href="#">应用开发接入指南 V1.0.docx</a>
 	</div>
 	<div class="page__ft"></div>
 </div>
@@ -40,9 +40,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             },
 			methods:{
 
-                previewFile: function(){
+                previewFile: function(url){
+                    alert(url);
                     workplat.file.preview({
-                    	url:"http://xxx/xx.doc",
+                    	url:url,
                         success:function(data){},
 						error:function(err){
 							$toast(err);

@@ -185,4 +185,17 @@ public class IndexController {
         return "audio";
     }
 
+    /**
+     * 文件接口页面
+     *
+     * @author 郁晓勇
+     * @date 2018/3/15 15:55
+     * @param []
+     * @return java.lang.String
+     */ 
+    @RequestMapping(value = "/file", method = {RequestMethod.GET})
+    public String file(){
+        return "file";
+    }
+
 }

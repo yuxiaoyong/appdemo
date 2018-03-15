@@ -71,7 +71,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					图片相关
 				</p>
 			</a>
-			<a href="" class="weui-grid js_grid">
+			<a @click="openFilePage()" class="weui-grid js_grid">
 				<div class="weui-grid__icon">
 					<img src="${pageContext.request.contextPath}/statics/imgs/icon_nav_cell.png" alt="">
 				</div>
@@ -236,6 +236,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     workplat.window.open ({
                         url:serverurl+"/video",
                         title:"视频接口",
+                        background:"#000000",
+                        close:function(data){
+                            //close为回调函数，当被打开的窗口关闭时，会调用这个函数
+                            //data为被关闭窗口回传的数据，json格式
+                        }
+                    });
+                },
+
+                openFilePage: function(){
+                    workplat.window.open ({
+                        url:serverurl+"/file",
+                        title:"文件接口",
                         background:"#000000",
                         close:function(data){
                             //close为回调函数，当被打开的窗口关闭时，会调用这个函数
