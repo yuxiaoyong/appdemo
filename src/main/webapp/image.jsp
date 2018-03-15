@@ -34,18 +34,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div>
 						<div class="weui-uploader__bd">
 							<ul class="weui-uploader__files" id="uploaderFiles">
-								<%--<li class="weui-uploader__file weui-uploader__file_status" style="background-image:url(./images/pic_160.png)">
-									<div class="weui-uploader__file-content">50%</div>
-								</li>--%>
+								<li class="weui-uploader__file weui-uploader__file_status">
+									<img view="true" viewpath="${pageContext.request.contextPath}/statics/imgs/avatar.jpg" src="${pageContext.request.contextPath}/statics/imgs/avatar.jpg" style="width:100%;height:100%;"/>
+								</li>
 							</ul>
-							<div class="weui-uploader__input-box">
-								<input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+							<div class="weui-uploader__input-box" @click="uploadImage()">
+								<%--<input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">--%>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<a href="javascript:;" @click="previewImage()" class="weui-btn weui-btn_primary" style="margin-top:20px;margin-bottom:20px;">预览图片</a>
+
+		<img v-for="image in images" style="width:100%;" :src="image"/>
+
+
 
 	</div>
 	<div class="page__ft"></div>
@@ -58,10 +64,44 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         var vm = new Vue({
             el: "#page-wrapper",
             data: {
-
-            },
+                images:[
+					"http://api.workplat.com:8080/wpapp-webapp/api/t/download?fileId=5a56be116b2e303030277d1d",
+					"http://api.workplat.com:8080/wpapp-webapp/api/t/download?fileId=5a56be116b2e303030277d1c",
+					"http://api.workplat.com:8080/wpapp-webapp/api/t/download?fileId=5a56be116b2e303030277d1b"
+				]
+			},
 			methods:{
 
+                uploadImage: function(){
+                    workplat.image.upload({
+                        type: 0,
+                        multiple: true,
+                        max: 5,
+                        compression: true,
+                        quality: 60,
+                        resize: 50,
+                        success:function(resIds){
+                            $.toast(resIds);
+                        },
+                        error:function(err){
+                            $.toast(err);
+                        }
+                    });
+				},
+
+				previewImage: function(){
+					var images = this.images;
+                    workplat.image.preview({
+                    	urls:images,
+                        success: function(data){
+                            console.log(data);
+                        },
+						error:function(err){
+							console.log(err);
+						}
+					});
+
+                }
 			}
         });
 

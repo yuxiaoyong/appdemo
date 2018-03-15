@@ -60,12 +60,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         workplat.location.getPosition({
             success:function(position){
+                alert(111);
                 onLocationSuccess(position);
             },
             error:function(msg){
+                alert(222);
                 onLocationError(msg);
             }
         });
+
     });
 </script>
 </html>

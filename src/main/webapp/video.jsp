@@ -58,6 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     var $this = this;
                     workplat.video.startRecord({
                         success: function(data){
+                            $.alert(JSON.stringify(data));
                             $this.video = data;
                             console.log(data.resId);//视频资源ID
                             console.log(data.coverId);//视频封面ID
