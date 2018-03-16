@@ -23,7 +23,10 @@ http://localhost:8090/index
 登录密码：111111 <br>
 
 > 打开应用管理界面
+
 ![应用管理界面](doc/images/app1.png)
 > 打开添加应用界面
+
 点击 "添加应用" 按钮
+
 ![应用添加界面](doc/images/app2.png)
