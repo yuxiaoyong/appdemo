@@ -12,9 +12,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
-	<script src="${request.pageContext.contextPath}/statics/libs/vue.min.js"></script>
-	<script src="${request.pageContext.contextPath}/statics/js/common.js"></script>
-
+	<script src="${pageContext.request.contextPath}/statics/libs/vue.min.js"></script>
+	<script src="${pageContext.request.contextPath}/statics/js/common.js"></script>
+	<style type="text/css">
+		* {
+			-webkit-touch-callout:none;
+			-webkit-user-select:none;
+			-khtml-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none;
+		}
+	</style>
 </head>
 <body>
 <div id="page-wrapper" class="page">
@@ -127,7 +136,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 				openUserPage: function(){
                     workplat.window.open ({
-                        url:serverurl+"/user",
+                        url:serverurl+"user",
                         title:"用户信息",
                         background:"#000000",
 						close:function(data){

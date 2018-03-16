@@ -14,8 +14,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
-	<script src="${request.pageContext.contextPath}/statics/libs/vue.min.js"></script>
-	<script src="${request.pageContext.contextPath}/statics/js/common.js"></script>
+	<script src="${pageContext.request.contextPath}/statics/libs/vue.min.js"></script>
+	<script src="${pageContext.request.contextPath}/statics/js/common.js"></script>
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.3&key=2049f0bec589bae14a5827481b1e4342"></script>
 
 </head>
