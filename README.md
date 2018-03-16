@@ -27,6 +27,18 @@ http://localhost:8090/index
 ![应用管理界面](doc/images/app1.png)
 > 打开添加应用界面
 
-点击 "添加应用" 按钮
+点击 "添加应用" 按钮，填写并保存应用基本信息
 
 ![应用添加界面](doc/images/app2.png)
+
+> 应用权限设置
+
+![设置应用权限](doc/images/app3.png)
+
+> 角色成员设置
+
+![设置应用权限](doc/images/app4.png)
+
+> 打开移动App应用中心
+
+![设置应用权限](doc/images/app4.png)
