@@ -13,7 +13,7 @@ java -jar appdemo-1.0-SNAPSHOT.war
 ```
 
 访问地址：
-http://localhost:8090/index
+http://localhost:8090/appdemo/index
 
 ![项目首页](doc/images/index.png)
 
