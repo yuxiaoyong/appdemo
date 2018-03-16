@@ -25,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<div class="page__bd">
 		<div style="margin-top: 50px;text-align: center;">
-		<a @click="previewFile('https://github.com/yuxiaoyong/appdemo/blob/master/doc/API%E7%BD%91%E9%A1%B5%E6%8E%A5%E5%8F%A3%20V2.0.docx?raw=true')" href="#">API网页接口 V2.0.docx（点击预览）</a>
+		<a @click="previewFile('https://github.com/yuxiaoyong/appdemo/blob/master/doc/API网页接口.docx?raw=true')" href="#">API网页接口.docx（点击预览）</a>
 		</div>
 	</div>
 	<div class="page__ft"></div>
