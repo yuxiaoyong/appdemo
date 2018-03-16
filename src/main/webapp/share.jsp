@@ -46,11 +46,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						content: "太仓检验检疫局统计数据显示，今年截至3月8日，太仓口岸共检验进口金属材料50批，货重757.3吨，货值142.3万美元",
 						url: "http://www.baidu.com/", //分享链接地址
 						image: "http://apps.bdimg.com/icon.png", //分享图片链接地址
-						success:function(location){
-
-						},
+						success:function(){},
 						error:function(msg){
-							var msg = msg;//获取失败信息
+							$.toast(msg);
 						}
 					});
 
