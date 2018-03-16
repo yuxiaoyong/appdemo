@@ -19,7 +19,7 @@ http://localhost:8090/index
 
 # 应用接入
 
-表头 | 表头
+``` | ```
 -----|------
 后台登录地址 | http://api.workplat.com:8080/wpapp-management/login/index
 后台登录用户 | admin@taicang.gov.cn
