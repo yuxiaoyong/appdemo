@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </body>
 <script type="text/javascript">
 	$(function(){
-
+        serverurl = "<%=basePath%>";
         var vm = new Vue({
             el: "#page-wrapper",
             data: {
