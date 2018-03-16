@@ -19,13 +19,13 @@ http://localhost:8090/index
 
 # 应用接入
 
-``` | ```
+标题 | 内容
 -----|------
 后台登录地址 | http://api.workplat.com:8080/wpapp-management/login/index
 后台登录用户 | admin@taicang.gov.cn
 后台登录密码 | 111111
-IOS下载地址 | ![二维码]()
-Android下载地址 | ![二维码]()
+IOS下载地址 | ![二维码](doc/images/ios_qr.png)
+Android下载地址 | ![二维码](doc/images/android_qr.png)
 App登录用户 | 11111111111
 App登录密码 | 111111
 
@@ -49,5 +49,5 @@ App登录密码 | 111111
 
 > 打开移动App应用中心
 
-打开移动App的应用中心，查看刚才接入的应用
+打开移动App的应用中心，查看刚才接入的应用<br>
 ![设置应用权限](doc/images/app5.png)
