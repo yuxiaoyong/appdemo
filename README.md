@@ -1,7 +1,7 @@
 # 相关文档
-[API接口文档（ALL）V1.7.docx]（doc/API接口文档（ALL）V1.7.docx）
-[API网页接口 V2.0.docx](doc/API网页接口 V2.0.docx)
-[应用开发接入指南 V1.0.docx](doc/应用开发接入指南 V1.0.docx)
+[API接口文档（ALL）V1.7.docx]（https://github.com/yuxiaoyong/appdemo/doc/API接口文档（ALL）V1.7.docx）
+[API网页接口 V2.0.docx](https://github.com/yuxiaoyong/appdemo/doc/API网页接口 V2.0.docx)
+[应用开发接入指南 V1.0.docx](https://github.com/yuxiaoyong/appdemo/doc/应用开发接入指南 V1.0.docx)
 
 # 项目打包、运行
 ``` lua
