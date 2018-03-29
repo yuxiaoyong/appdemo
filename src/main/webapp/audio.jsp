@@ -62,10 +62,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 },
 
 				touchend: function(){
+				    var $this = this;
                     workplat.audio.stopRecord({
                         success: function(data){
-                            $.toast(data.resId); //音频资源ID
-                            $.toast(data.duration);//音频时长（秒）
+                            $this.audio = data;
+//                            $.toast(data.resId); //音频资源ID
+//                            $.toast(data.duration);//音频时长（秒）
                         },
                         error: function(err){
                             $.toast(err);
@@ -74,10 +76,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				},
 
 				touchcancel: function(){
+                    var $this = this;
                     workplat.audio.stopRecord({
                         success: function(data){
-                            $.toast(data.resId); //音频资源ID
-                            $.toast(data.duration);//音频时长（秒）
+                            $this.audio = data;
+//                            $.toast(data.resId); //音频资源ID
+//                            $.toast(data.duration);//音频时长（秒）
                         },
                         error: function(err){
                             $.toast(err);

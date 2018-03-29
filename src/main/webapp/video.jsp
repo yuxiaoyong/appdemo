@@ -37,7 +37,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div style="margin-top: 20px;">
 			视频ID: {{video.resId}}<br/>
 			视频封面ID: {{video.coverId}}<br/>
-			音频时长: {{video.duration}}
+			音频时长: {{video.duration}}<br/>
+			<img :src="video.coverUrl" style="width:200px;height:300px;"/>
 		</div>
 		<a href="javascript:;" @click="startPlay()" class="weui-btn weui-btn_primary" style="margin-top:100px;">开始播放视频</a>
 	</div>
@@ -58,7 +59,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     var $this = this;
                     workplat.video.startRecord({
                         success: function(data){
-                            $.alert(JSON.stringify(data));
+                            //$.alert(JSON.stringify(data));
+                            data.coverUrl = "http://api.workplat.com:8080/wpapp-webapp/api/t/downloadfile?mediaId="+data.coverId;
                             $this.video = data;
                             console.log(data.resId);//视频资源ID
                             console.log(data.coverId);//视频封面ID
